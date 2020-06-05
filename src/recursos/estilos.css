@@ -1,0 +1,129 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-may-2020, 20:43:14
+    Author     : Alex Clemente < DAW >
+*/
+
+.root {
+    -fx-background-color: #EAE2B7;
+    /*-fx-background-image: url("fondo.png");*/
+}
+
+.label {
+    /*-fx-text-fill: #003049;*/
+    -fx-font-size: 16px;
+}
+
+.bold {
+    -fx-font-weight: bold;
+}
+
+.title {
+    -fx-font-size: 25px;
+}
+
+.datosTarea {
+    -fx-background-color: #FCBF49;
+    /*-fx-background-image: url("27e56034.png");*/
+}
+
+/* TABLEVIEW */
+.table-view .column-header-background .label{
+    -fx-font-size: 13px;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #003049;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+/* Selected row when table not focused */
+.table-row-cell:filled:focused:selected {
+       -fx-background-insets: 0, 1, 2;
+       -fx-background: -fx-accent;
+       -fx-text-fill: #EAE2B7;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: #003049;
+}
+
+/* VARIABLE DEFINITIONS: Only these 4 variables have to be adjusted, the rest is copy-paste */
+* {
+    -fx-my-menu-color: #003049;                  /* Change according to your needs */
+    -fx-my-menu-color-highlighted: #F77F00;      /* Change according to your needs */
+    -fx-my-menu-font-color: #F77F00;             /* Change according to your needs */
+    -fx-my-menu-font-color-highlighted: #003049; /* Change according to your needs */
+}
+
+/* MENU BAR + Top-level MENU BUTTONS */
+/*** The menu bar itself ***/    
+.menu-bar {
+    -fx-background-color: -fx-my-menu-color;
+}
+
+/*** Top-level menu itself (not selected / hovered) ***/
+.menu-bar > .container > .menu-button {
+    -fx-background-color: -fx-my-menu-color;
+}
+
+/*** Top-level menu's label (not selected / hovered) ***/
+.menu-bar > .container > .menu-button > .label {
+    -fx-text-fill: -fx-my-menu-font-color;
+}
+
+/*** Top-level menu's label (disabled) ***/
+.menu-bar > .container > .menu-button > .label:disabled {
+    -fx-opacity: 1.0;
+}
+
+/*** Top-level menu itself (selected / hovered) ***/
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: -fx-my-menu-color-highlighted;
+}
+
+/*** Top-level menu's label (selected / hovered) ***/
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing > .label {
+    -fx-text-fill: -fx-my-menu-font-color-highlighted;
+}
+
+/* MENU ITEM (children of a MENU BUTTON) */
+/*** The item itself (not hovered / focused) ***/    
+.menu-item {
+    -fx-background-color: -fx-my-menu-color; 
+}
+
+/*** The item's label (not hovered / focused) ***/   
+.menu-item .label {
+    -fx-text-fill: -fx-my-menu-font-color;
+}
+
+/*** The item's label (disabled) ***/   
+.menu-item .label:disabled {
+    -fx-opacity: 1.0;
+}    
+
+.menu-button > .label {
+    -fx-text-fill: -fx-my-menu-font-color;
+}
+
+.menu-bar .menu .labelMenu {
+    -fx-text-fill: -fx-my-menu-font-color;
+}
+.menu-bar .menu:hover  .labelMenu {
+    -fx-text-fill: -fx-my-menu-font-color-highlighted;
+}
+
+.mnemonic-underline {
+    -fx-stroke: -fx-text-fill;
+    -fx-text-fill: white;
+}

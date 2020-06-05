@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPaneFX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../recursos/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FXMLUsuarioController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false">
+               <graphic>
+                  <Label onMouseClicked="#cargarPanelTareas" styleClass="labelMenu" text="Mis tareas" />
+               </graphic>
+          </Menu>
+          <Menu mnemonicParsing="false">
+               <graphic>
+                  <Label onMouseClicked="#cargarPanelPerfil" styleClass="labelMenu" text="Mi perfil" />
+               </graphic></Menu>
+            <Menu fx:id="menuAdministrar" text="_Administrar" visible="false">
+               <items>
+                  <MenuItem onAction="#cargarPanelAdministracionUsuarios" text="_Usuarios" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Label onMouseClicked="#mostrarAutor" styleClass="labelMenu" text="Autor" />
+               </graphic>
+            </Menu>
+            <Menu text="_Salir">
+               <items>
+                  <MenuItem onAction="#cerrarSesion" text="_Cerrar sesión" />
+                  <MenuItem onAction="#cerrarAplicacion" text="Cerrar a_plicación" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

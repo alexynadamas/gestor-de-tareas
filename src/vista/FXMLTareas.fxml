@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="775.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FXMLTareasController">
+   <children>
+      <Label layoutX="338.0" layoutY="53.0" styleClass="title" text="Mis tareas">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="715.0" styleClass="bold" text="Filtrar por prioridad">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="459.0" layoutY="715.0" styleClass="bold" text="Filtrar por estado">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textfieldBuscador" layoutX="37.0" layoutY="164.0" prefHeight="25.0" prefWidth="159.0" />
+      <Button layoutX="657.0" layoutY="139.0" mnemonicParsing="false" onAction="#crearTarea" text="Nueva tarea">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tareasFX" layoutX="37.0" layoutY="218.0" onMouseClicked="#mostrarInfoTarea" prefHeight="467.0" prefWidth="722.0">
+        <columns>
+          <TableColumn fx:id="columnaId" prefWidth="42.0" text="id" />
+          <TableColumn fx:id="columnaTitulo" prefWidth="344.0" text="Título" />
+            <TableColumn fx:id="columnaPrioridad" prefWidth="124.0" text="Prioridad" />
+            <TableColumn fx:id="columnaEstado" prefWidth="113.0" text="Estado" />
+            <TableColumn fx:id="columnaProgreso" prefWidth="98.0" text="Progreso" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="filtroPrioridadFX" layoutX="202.0" layoutY="715.0" prefWidth="150.0" />
+      <ComboBox fx:id="filtroEstadoFX" layoutX="606.0" layoutY="715.0" prefWidth="150.0" />
+      <Pane layoutX="802.0" layoutY="7.0" prefHeight="769.0" prefWidth="398.0" styleClass="datosTarea">
+         <children>
+            <Label layoutX="100.0" layoutY="58.0" styleClass="title" text="Datos de la tarea">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="131.0" styleClass="bold" text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="idFX" layoutX="33.0" layoutY="163.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="101.0" layoutY="131.0" styleClass="bold" text="Título">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="214.0" styleClass="bold" text="Descripción">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="407.0" styleClass="bold" text="Prioridad">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="219.0" layoutY="407.0" styleClass="bold" text="Estado">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="498.0" styleClass="bold" text="Creador">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="225.0" layoutY="498.0" styleClass="bold" text="Asignado a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="594.0" styleClass="bold" text="Progreso">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tituloFX" layoutX="101.0" layoutY="160.0" prefHeight="25.0" prefWidth="267.0" />
+            <TextArea fx:id="descripcionFX" layoutX="31.0" layoutY="239.0" prefHeight="145.0" prefWidth="335.0" />
+            <ComboBox fx:id="prioridadFX" layoutX="30.0" layoutY="436.0" prefWidth="150.0" />
+            <ComboBox fx:id="estadoFX" layoutX="218.0" layoutY="436.0" prefWidth="150.0" />
+            <TextField fx:id="asignadoFX" layoutX="220.0" layoutY="527.0" />
+            <Label fx:id="labelPorcentaje" layoutX="107.0" layoutY="594.0" text="0 %">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Slider fx:id="progresoFX" layoutX="35.0" layoutY="630.0" prefHeight="36.0" prefWidth="335.0" showTickLabels="true" showTickMarks="true" />
+            <Button layoutX="112.0" layoutY="702.0" mnemonicParsing="false" onAction="#actualizarDatosTarea" text="Actualizar">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="213.0" layoutY="702.0" mnemonicParsing="false" onAction="#eliminarTarea" prefHeight="30.0" prefWidth="80.0" text="Eliminar">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="creadorFX" layoutX="34.0" layoutY="530.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="37.0" layoutY="127.0" styleClass="bold" text="Buscar:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

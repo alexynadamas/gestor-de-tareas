@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="775.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FXMLPerfilController">
+   <children>
+      <Label layoutX="300.0" layoutY="209.0" styleClass="bold" text="Id">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="259.0" styleClass="bold" text="Usuario">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="309.0" styleClass="bold" text="Nombre">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="359.0" styleClass="bold" text="Apellidos">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="409.0" styleClass="bold" text="Email">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="459.0" styleClass="bold" text="Contraseña">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="509.0" styleClass="bold" text="Rol">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelRol" layoutX="429.0" layoutY="509.0" text="Rol">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="459.0" text="********">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEmail" layoutX="429.0" layoutY="409.0" text="Email">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelApellidos" layoutX="429.0" layoutY="359.0" text="Apellidos">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNombre" layoutX="429.0" layoutY="309.0" text="Nombre">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelUsuario" layoutX="429.0" layoutY="259.0" text="Usuario">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelId" layoutX="429.0" layoutY="209.0" text="Id">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="344.0" layoutY="110.0" styleClass="title" text="Mi perfil">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonCambiarContrasenya" layoutX="309.0" layoutY="609.0" mnemonicParsing="false" onAction="#activarPanelCambiarContraseña" text="Cambiar contraseña">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Pane fx:id="panelCambiarContrasenya" layoutX="671.0" layoutY="280.0" prefHeight="184.0" prefWidth="406.0" visible="false">
+         <children>
+            <PasswordField fx:id="nuevaContrasenya" layoutX="212.0" layoutY="36.0" />
+            <PasswordField fx:id="confirmarContrasenya" layoutX="212.0" layoutY="90.0" />
+            <Label layoutX="46.0" layoutY="36.0" styleClass="bold" text="Nueva contraseña">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="90.0" styleClass="bold" text="Confirmar">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="206.0" layoutY="139.0" mnemonicParsing="false" onAction="#guardarNuevaContraseña" text="Aceptar">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="289.0" layoutY="139.0" mnemonicParsing="false" onAction="#cancelarCambioContraseña" text="Cancelar">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
