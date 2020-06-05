@@ -1,0 +1,6 @@
+usuario usuario (rol: usuario)
+admin admin (rol: administrador)
+
+Para crear nuevos usuarios:
+Menu Administrar > Usuarios
+
